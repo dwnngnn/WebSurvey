@@ -1,0 +1,242 @@
+
+:root {
+    --blue-900: #0b2a4a;
+    --blue-700: #0d5cab;
+    --blue-600: #1670d0;
+    --blue-500: #2b87e3;
+    --blue-200: #c9ddf5;
+    --blue-100: #e6f0fb;
+    --blue-50: #f4f8fd;
+    --text: #1c2b3a;
+}
+
+body {
+    margin: 0;
+    padding: 32px 16px;
+    font-family: "Segoe UI", Roboto, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--text);
+    background-color: var(--blue-100);
+}
+
+main {
+    box-sizing: border-box;
+    width: 66.67%;
+    max-width: 1000px;
+    min-width: 700px;
+    margin: 0 auto;
+    padding: 32px 36px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(13, 92, 171, 0.15);
+}
+
+header {
+    width: 66.67%;
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    text-align: left;
+}
+
+header img {
+    display: block;
+    height: 140px;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--blue-700);
+}
+
+h1 + p {
+    margin: 0 0 28px;
+    text-align: center;
+    color: #44556a;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+h2,
+legend {
+    margin: 0 0 14px;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: left;
+    color: var(--blue-700);
+}
+
+fieldset,
+section {
+    box-sizing: border-box;
+    margin: 0 0 22px;
+    padding: 18px 22px 20px;
+    background-color: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 10px;
+}
+
+legend {
+    padding: 0 8px;
+    margin-bottom: 0;
+}
+
+fieldset > p,
+form > p {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    align-items: center;
+    gap: 6px 14px;
+    margin: 0 0 14px;
+}
+
+fieldset > p:last-child {
+    margin-bottom: 0;
+}
+
+label {
+    font-weight: 600;
+    color: var(--blue-900);
+}
+
+form > p > label {
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 9px 12px;
+    font: inherit;
+    color: var(--text);
+    background-color: #ffffff;
+    border: 1px solid #9db8d9;
+    border-radius: 6px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--blue-500);
+    box-shadow: 0 0 0 3px rgba(43, 135, 227, 0.25);
+}
+
+fieldset > label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 22px 4px 0;
+    font-weight: 400;
+    color: var(--text);
+    cursor: pointer;
+}
+
+fieldset > label:has(> input[type="checkbox"]) {
+    display: flex;
+    margin-right: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: var(--blue-600);
+}
+
+button,
+main > p:last-child a {
+    display: inline-block;
+    padding: 10px 32px;
+    font: inherit;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--blue-600);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+button:hover,
+main > p:last-child a:hover {
+    background-color: var(--blue-700);
+}
+
+form > button {
+    display: block;
+    margin: 28px auto 0;
+}
+
+main > p:last-child {
+    margin: 28px 0 0;
+    text-align: center;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 10px 16px;
+    margin: 0;
+}
+
+dt {
+    font-weight: 600;
+    color: var(--blue-900);
+}
+
+dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    main,
+    header {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    body {
+        padding: 16px 10px;
+        font-size: 16px;
+    }
+
+    main {
+        padding: 22px 18px;
+    }
+
+    fieldset,
+    section {
+        padding: 16px;
+    }
+
+    fieldset > p,
+    form > p,
+    dl {
+        grid-template-columns: 1fr;
+    }
+
+    dt {
+        margin-top: 6px;
+    }
+}
